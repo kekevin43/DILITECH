@@ -1,0 +1,100 @@
+{
+  "name": "Product",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Product name"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "laptop",
+        "desktop",
+        "accessory"
+      ],
+      "description": "Product category"
+    },
+    "brand": {
+      "type": "string",
+      "description": "Brand name"
+    },
+    "description": {
+      "type": "string",
+      "description": "Product description"
+    },
+    "price": {
+      "type": "number",
+      "description": "Product price in USD"
+    },
+    "original_price": {
+      "type": "number",
+      "description": "Original price before discount"
+    },
+    "stock": {
+      "type": "number",
+      "description": "Available stock quantity"
+    },
+    "images": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Product image URLs"
+    },
+    "specs": {
+      "type": "object",
+      "properties": {
+        "processor": {
+          "type": "string"
+        },
+        "ram": {
+          "type": "string"
+        },
+        "storage": {
+          "type": "string"
+        },
+        "graphics": {
+          "type": "string"
+        },
+        "display": {
+          "type": "string"
+        },
+        "os": {
+          "type": "string"
+        },
+        "weight": {
+          "type": "string"
+        },
+        "connectivity": {
+          "type": "string"
+        }
+      }
+    },
+    "rating": {
+      "type": "number",
+      "description": "Average rating out of 5"
+    },
+    "reviews_count": {
+      "type": "number",
+      "description": "Total number of reviews"
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether product is featured"
+    },
+    "trending": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether product is trending"
+    }
+  },
+  "required": [
+    "name",
+    "category",
+    "brand",
+    "price",
+    "stock"
+  ]
+}

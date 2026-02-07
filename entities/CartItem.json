@@ -1,0 +1,41 @@
+{
+  "name": "CartItem",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "Email of the user"
+    },
+    "product_id": {
+      "type": "string",
+      "description": "ID of the product"
+    },
+    "quantity": {
+      "type": "number",
+      "description": "Quantity in cart"
+    },
+    "product_snapshot": {
+      "type": "object",
+      "description": "Snapshot of product data at time of adding to cart",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "price": {
+          "type": "number"
+        },
+        "image": {
+          "type": "string"
+        },
+        "stock": {
+          "type": "number"
+        }
+      }
+    }
+  },
+  "required": [
+    "user_email",
+    "product_id",
+    "quantity"
+  ]
+}
